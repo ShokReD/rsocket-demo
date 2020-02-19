@@ -24,7 +24,7 @@ public class Client implements ApplicationListener<ApplicationReadyEvent> {
         rSocketRequester.route("channel.{param}", "hi")
                 .data(Flux.interval(Duration.ofSeconds(1))
                         .doOnNext(x -> System.out.println("Sent: " + x))
-                        .map(Object::toString))
+                        .map(Object::toString), String.class)
                 .retrieveFlux(String.class)
                 .doOnNext(x -> System.out.println("Received from server: " + x))
                 .blockLast();

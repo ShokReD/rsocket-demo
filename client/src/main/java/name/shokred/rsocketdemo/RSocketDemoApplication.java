@@ -1,0 +1,13 @@
+package name.shokred.rsocketdemo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class RSocketDemoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(RSocketDemoApplication.class, args);
+	}
+
+}
